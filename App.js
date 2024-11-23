@@ -43,4 +43,7 @@ ModuleRoutes(app);
 AssignmentRoutes(app);
 EnrollmentRoutes(app);
 
-app.listen(4000);
+const PORT = process.env.PORT || 4000; // Use Heroku's assigned port or default to 4000 locally
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
